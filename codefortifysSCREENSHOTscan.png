@@ -1,0 +1,11 @@
+CodeFortify Scanner
+Run Scan
+Total Findings: 2
+High/Critical: 1
+Package: minimist
+
+Severity: CRITICAL
+
+CVE: CVE-2021-44906
+
+Title: Prototype Pollution in minimist

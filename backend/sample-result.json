@@ -1,0 +1,16 @@
+{
+  "artifact": "testapp",
+  "type": "filesystem",
+  "totalFindings": 2,
+  "highOrCriticalCount": 1,
+  "findings": [
+    {
+      "target": "package-lock.json",
+      "package": "minimist",
+      "installedVersion": "0.0.8",
+      "severity": "CRITICAL",
+      "vulnerabilityId": "CVE-2021-44906",
+      "title": "Prototype Pollution in minimist"
+    }
+  ]
+}
