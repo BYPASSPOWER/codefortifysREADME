@@ -51,7 +51,7 @@ npm run dev
 ## OPEN BROWSWER
 http://localhost:3000
 
-## 🔮 Upcoming Features (Phase 2)
+## 🔮 Upcoming Features (Phase 3)
 Upload and scan ZIP projects
 Scan GitHub repositories
 Security scoring system
@@ -60,5 +60,32 @@ Improved UI/UX
 ## AUTHOR
 Built as part of a DevSecOps learning and portfolio project.
 
+---
 
+## Phase 3: CI/CD Security Automation
+
+CodeFortify now includes automated security scanning using GitHub Actions.
+
+Whenever code is pushed to the repository or a pull request is opened, a CI/CD pipeline automatically runs a Trivy vulnerability scan.
+
+### Automated Workflow
+
+1. Developer pushes code to GitHub
+2. GitHub Actions starts automatically
+3. Repository is checked out
+4. Trivy scans the project filesystem
+5. HIGH / CRITICAL vulnerabilities are reported
+
+### Benefits
+
+- Continuous security checks
+- Faster developer feedback
+- Shift-left DevSecOps practices
+- Reduced deployment risk
+
+### Technologies Used
+
+- GitHub Actions
+- Trivy
+- YAML Pipelines
  
