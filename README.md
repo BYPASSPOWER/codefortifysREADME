@@ -89,3 +89,14 @@ Whenever code is pushed to the repository or a pull request is opened, a CI/CD p
 - Trivy
 - YAML Pipelines
  
+## Phase 4: Dockerized Platform
+
+![Docker Scan](./screenshots/codefortify-docker-scan.png)
+
+CodeFortify was containerized using Docker Compose with separate frontend and backend services, including Trivy installed in the backend container.
+
+## Phase 5: Kubernetes Deployment
+
+![Kubernetes Scan](./screenshots/codefortify-kubernetes-scan.png)
+
+CodeFortify was deployed to Kubernetes using frontend and backend Deployments and Services. The application successfully scans uploaded ZIP projects and displays HIGH/CRITICAL vulnerabilities through the Kubernetes-hosted UI.

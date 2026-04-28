@@ -9,3 +9,29 @@ Severity: CRITICAL
 CVE: CVE-2021-44906
 
 Title: Prototype Pollution in minimist
+
+
+CodeFortify Scanner
+testapp.zip Upload & Scan
+Total Findings: 2
+High/Critical: 1
+Package: minimist
+
+Severity: CRITICAL
+
+CVE: CVE-2021-44906
+
+Title: minimist: prototype pollution
+
+
+CodeFortify Scanner
+testapp.zip Upload & Scan(KUBERNETES)
+Total Findings: 2
+High/Critical: 1
+Package: minimist
+
+Severity: CRITICAL
+
+CVE: CVE-2021-44906
+
+Title: minimist: prototype pollution

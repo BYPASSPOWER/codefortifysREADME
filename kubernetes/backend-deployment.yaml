@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: codefortify-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: codefortify-backend
+  template:
+    metadata:
+      labels:
+        app: codefortify-backend
+    spec:
+      containers:
+        - name: backend
+          image: codefortify-backend:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
