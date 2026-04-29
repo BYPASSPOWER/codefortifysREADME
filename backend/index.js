@@ -4,6 +4,10 @@ const unzipper = require('unzipper');
 const { exec } = require('child_process');
 const fs = require('fs');
 const cors = require('cors');
+const client = require('prom-client');
+
+const register = new client.Registry();
+client.collectDefaultMetrics({ register });
 
 const app = express();
 app.use(cors());
@@ -61,6 +65,10 @@ app.post('/scan', upload.single('file'), (req, res) => {
         }
       });
     });
+});
+app.get('/metrics', async (req, res) => {
+  res.set('Content-Type', register.contentType);
+  res.end(await register.metrics());
 });
 
 app.listen(5000, () => {

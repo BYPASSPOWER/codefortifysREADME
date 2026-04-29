@@ -1,12 +1,32 @@
 services:
   backend:
     build: ./backend
+    container_name: codefortify-backend
     ports:
       - "5000:5000"
 
   frontend:
     build: ./frontended
+    container_name: codefortify-frontend
     ports:
       - "3000:3000"
     depends_on:
       - backend
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: codefortify-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: codefortify-grafana
+    ports:
+      - "3001:3000"
+    depends_on:
+      - prometheus

@@ -100,3 +100,16 @@ CodeFortify was containerized using Docker Compose with separate frontend and ba
 ![Kubernetes Scan](./screenshots/codefortify-kubernetes-scan.png)
 
 CodeFortify was deployed to Kubernetes using frontend and backend Deployments and Services. The application successfully scans uploaded ZIP projects and displays HIGH/CRITICAL vulnerabilities through the Kubernetes-hosted UI.
+
+## Phase 7: Monitoring & Observability
+
+CodeFortify includes a monitoring stack using Prometheus and Grafana.
+
+Prometheus scrapes backend metrics from the `/metrics` endpoint, while Grafana provides dashboards for visualizing application health and performance.
+
+### Tools Used
+
+- Prometheus
+- Grafana
+- prom-client
+- Docker Compose

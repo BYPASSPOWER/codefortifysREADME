@@ -14,12 +14,12 @@ resource "docker_network" "codefortify_network" {
 }
 
 resource "docker_image" "backend" {
-  name = "codefortify-backend:latest"
+  name         = "codefortify-backend:latest"
   keep_locally = true
 }
 
 resource "docker_image" "frontend" {
-  name = "codefortify-frontend:latest"
+  name         = "codefortify-frontend:latest"
   keep_locally = true
 }
 
@@ -35,6 +35,8 @@ resource "docker_container" "backend" {
     internal = 5000
     external = 5000
   }
+
+  restart = "unless-stopped"
 }
 
 resource "docker_container" "frontend" {
@@ -50,5 +52,9 @@ resource "docker_container" "frontend" {
     external = 3000
   }
 
-  depends_on = [docker_container.backend]
+  restart = "unless-stopped"
+
+  depends_on = [
+    docker_container.backend
+  ]
 }
