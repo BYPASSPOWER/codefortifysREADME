@@ -113,3 +113,10 @@ Prometheus scrapes backend metrics from the `/metrics` endpoint, while Grafana p
 - Grafana
 - prom-client
 - Docker Compose
+
+
+## Phase 8: SaaS UI Upgrade
+
+![SaaS UI](./screenshots/codefortify-saas-ui.png)
+
+CodeFortify frontend was redesigned into a modern SaaS-style dashboard featuring vulnerability summary cards, branded UI, and polished findings presentation.
