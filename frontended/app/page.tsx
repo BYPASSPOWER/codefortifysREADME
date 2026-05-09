@@ -119,6 +119,13 @@ export default function Home() {
                 <p><strong>Severity:</strong> {v.severity}</p>
                 <p><strong>CVE:</strong> {v.vulnerabilityId}</p>
                 <p><strong>Title:</strong> {v.title}</p>
+
+{v.aiExplanation && (
+  <div style={{ marginTop: "12px", color: "#cbd5e1" }}>
+    <strong>AI Explanation:</strong>
+    <pre style={{ whiteSpace: "pre-wrap" }}>{v.aiExplanation}</pre>
+  </div>
+)}
               </div>
             ))}
           </section>

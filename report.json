@@ -1,0 +1,494 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2026-05-04T14:12:01.351416737-05:00",
+  "ArtifactName": ".",
+  "ArtifactType": "filesystem",
+  "Metadata": {
+    "ImageConfig": {
+      "architecture": "",
+      "created": "0001-01-01T00:00:00Z",
+      "os": "",
+      "rootfs": {
+        "type": "",
+        "diff_ids": null
+      },
+      "config": {}
+    }
+  },
+  "Results": [
+    {
+      "Target": "backend/frontend/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-41305",
+          "PkgID": "postcss@8.4.31",
+          "PkgName": "postcss",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/postcss@8.4.31",
+            "UID": "e38dfd9edb181dc4"
+          },
+          "InstalledVersion": "8.4.31",
+          "FixedVersion": "8.5.10",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-41305",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "postcss: PostCSS: Cross-Site Scripting (XSS) via improper escaping of style closing tags",
+          "Description": "PostCSS takes a CSS file and provides an API to analyze and modify its rules by transforming the rules into an Abstract Syntax Tree. Versions prior to 8.5.10 do not escape `\u003c/style\u003e` sequences when stringifying CSS ASTs. When user-submitted CSS is parsed and re-stringified for embedding in HTML `\u003cstyle\u003e` tags, `\u003c/style\u003e` in CSS values breaks out of the style context, enabling XSS. Version 8.5.10 fixes the issue.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-41305",
+            "https://github.com/postcss/postcss",
+            "https://github.com/postcss/postcss/releases/tag/8.5.10",
+            "https://github.com/postcss/postcss/security/advisories/GHSA-qx2v-qp2m-jg93",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-41305",
+            "https://www.cve.org/CVERecord?id=CVE-2026-41305"
+          ],
+          "PublishedDate": "2026-04-24T03:16:11.547Z",
+          "LastModifiedDate": "2026-04-24T17:16:21.5Z"
+        }
+      ]
+    },
+    {
+      "Target": "backend/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm"
+    },
+    {
+      "Target": "backend/testapp/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2021-44906",
+          "PkgID": "minimist@0.0.8",
+          "PkgName": "minimist",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/minimist@0.0.8",
+            "UID": "5aa36d791b8ea6bb"
+          },
+          "InstalledVersion": "0.0.8",
+          "FixedVersion": "1.2.6, 0.2.4",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44906",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "minimist: prototype pollution",
+          "Description": "Minimist \u003c=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95).",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "ghsa": 4,
+            "nvd": 4,
+            "oracle-oval": 2,
+            "redhat": 2,
+            "rocky": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0321",
+            "https://access.redhat.com/security/cve/CVE-2021-44906",
+            "https://bugzilla.redhat.com/2066009",
+            "https://bugzilla.redhat.com/2130518",
+            "https://bugzilla.redhat.com/2134609",
+            "https://bugzilla.redhat.com/2140911",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2066009",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2130518",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2134609",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2140911",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2142808",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35256",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43548",
+            "https://errata.almalinux.org/9/ALSA-2023-0321.html",
+            "https://errata.rockylinux.org/RLSA-2023:0321",
+            "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip",
+            "https://github.com/advisories/GHSA-xvch-5gv4-984h",
+            "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703",
+            "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb",
+            "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d",
+            "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11",
+            "https://github.com/minimistjs/minimist/commits/v0.2.4",
+            "https://github.com/minimistjs/minimist/issues/11",
+            "https://github.com/minimistjs/minimist/pull/24",
+            "https://github.com/substack/minimist",
+            "https://github.com/substack/minimist/blob/master/index.js#L69",
+            "https://github.com/substack/minimist/issues/164",
+            "https://linux.oracle.com/cve/CVE-2021-44906.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0321.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-44906",
+            "https://security.netapp.com/advisory/ntap-20240621-0006",
+            "https://security.netapp.com/advisory/ntap-20240621-0006/",
+            "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764",
+            "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068",
+            "https://www.cve.org/CVERecord?id=CVE-2021-44906"
+          ],
+          "PublishedDate": "2022-03-17T16:15:07.51Z",
+          "LastModifiedDate": "2024-11-21T06:31:40.98Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-7598",
+          "PkgID": "minimist@0.0.8",
+          "PkgName": "minimist",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/minimist@0.0.8",
+            "UID": "5aa36d791b8ea6bb"
+          },
+          "InstalledVersion": "0.0.8",
+          "FixedVersion": "0.2.1, 1.2.3",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-7598",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-minimist: prototype pollution allows adding or modifying properties of Object.prototype using a constructor or __proto__ payload",
+          "Description": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "ghsa": 2,
+            "nvd": 2,
+            "oracle-oval": 3,
+            "redhat": 2,
+            "rocky": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5.6
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V2Score": 6.8,
+              "V3Score": 5.6
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5.6
+            }
+          },
+          "References": [
+            "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
+            "https://access.redhat.com/security/cve/CVE-2020-7598",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1813344",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1844929",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1845247",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1845256",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11080",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8172",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8174",
+            "https://errata.almalinux.org/8/ALSA-2020-2852.html",
+            "https://errata.rockylinux.org/RLSA-2020:2852",
+            "https://github.com/minimistjs/minimist/commit/10bd4cdf49d9686d48214be9d579a9cdfda37c68",
+            "https://github.com/minimistjs/minimist/commit/38a4d1caead72ef99e824bb420a2528eec03d9ab",
+            "https://github.com/minimistjs/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95",
+            "https://github.com/minimistjs/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94",
+            "https://github.com/substack/minimist",
+            "https://linux.oracle.com/cve/CVE-2020-7598.html",
+            "https://linux.oracle.com/errata/ELSA-2020-2852.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7598",
+            "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764",
+            "https://www.cve.org/CVERecord?id=CVE-2020-7598",
+            "https://www.npmjs.com/advisories/1179"
+          ],
+          "PublishedDate": "2020-03-11T23:15:11.917Z",
+          "LastModifiedDate": "2024-11-21T05:37:26.9Z"
+        }
+      ]
+    },
+    {
+      "Target": "backend/uploads/extracted_1777038052601/testapp/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2021-44906",
+          "PkgID": "minimist@0.0.8",
+          "PkgName": "minimist",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/minimist@0.0.8",
+            "UID": "96acb1536c7427d7"
+          },
+          "InstalledVersion": "0.0.8",
+          "FixedVersion": "1.2.6, 0.2.4",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2021-44906",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "minimist: prototype pollution",
+          "Description": "Minimist \u003c=1.2.5 is vulnerable to Prototype Pollution via file index.js, function setKey() (lines 69-95).",
+          "Severity": "CRITICAL",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "alma": 2,
+            "ghsa": 4,
+            "nvd": 4,
+            "oracle-oval": 2,
+            "redhat": 2,
+            "rocky": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 9.8
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "V2Score": 7.5,
+              "V3Score": 9.8
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/errata/RHSA-2023:0321",
+            "https://access.redhat.com/security/cve/CVE-2021-44906",
+            "https://bugzilla.redhat.com/2066009",
+            "https://bugzilla.redhat.com/2130518",
+            "https://bugzilla.redhat.com/2134609",
+            "https://bugzilla.redhat.com/2140911",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2066009",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2130518",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2134609",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2140911",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2142808",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44906",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3517",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35256",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-43548",
+            "https://errata.almalinux.org/9/ALSA-2023-0321.html",
+            "https://errata.rockylinux.org/RLSA-2023:0321",
+            "https://github.com/Marynk/JavaScript-vulnerability-detection/blob/main/minimist%20PoC.zip",
+            "https://github.com/advisories/GHSA-xvch-5gv4-984h",
+            "https://github.com/minimistjs/minimist/commit/34e20b8461118608703d6485326abbb8e35e1703",
+            "https://github.com/minimistjs/minimist/commit/bc8ecee43875261f4f17eb20b1243d3ed15e70eb",
+            "https://github.com/minimistjs/minimist/commit/c2b981977fa834b223b408cfb860f933c9811e4d",
+            "https://github.com/minimistjs/minimist/commit/ef9153fc52b6cea0744b2239921c5dcae4697f11",
+            "https://github.com/minimistjs/minimist/commits/v0.2.4",
+            "https://github.com/minimistjs/minimist/issues/11",
+            "https://github.com/minimistjs/minimist/pull/24",
+            "https://github.com/substack/minimist",
+            "https://github.com/substack/minimist/blob/master/index.js#L69",
+            "https://github.com/substack/minimist/issues/164",
+            "https://linux.oracle.com/cve/CVE-2021-44906.html",
+            "https://linux.oracle.com/errata/ELSA-2023-0321.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2021-44906",
+            "https://security.netapp.com/advisory/ntap-20240621-0006",
+            "https://security.netapp.com/advisory/ntap-20240621-0006/",
+            "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764",
+            "https://stackoverflow.com/questions/8588563/adding-custom-properties-to-a-function/20278068#20278068",
+            "https://www.cve.org/CVERecord?id=CVE-2021-44906"
+          ],
+          "PublishedDate": "2022-03-17T16:15:07.51Z",
+          "LastModifiedDate": "2024-11-21T06:31:40.98Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2020-7598",
+          "PkgID": "minimist@0.0.8",
+          "PkgName": "minimist",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/minimist@0.0.8",
+            "UID": "96acb1536c7427d7"
+          },
+          "InstalledVersion": "0.0.8",
+          "FixedVersion": "0.2.1, 1.2.3",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2020-7598",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "nodejs-minimist: prototype pollution allows adding or modifying properties of Object.prototype using a constructor or __proto__ payload",
+          "Description": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype using a \"constructor\" or \"__proto__\" payload.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-1321"
+          ],
+          "VendorSeverity": {
+            "alma": 3,
+            "ghsa": 2,
+            "nvd": 2,
+            "oracle-oval": 3,
+            "redhat": 2,
+            "rocky": 3
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5.6
+            },
+            "nvd": {
+              "V2Vector": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V2Score": 6.8,
+              "V3Score": 5.6
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "V3Score": 5.6
+            }
+          },
+          "References": [
+            "http://lists.opensuse.org/opensuse-security-announce/2020-06/msg00024.html",
+            "https://access.redhat.com/security/cve/CVE-2020-7598",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1813344",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1844929",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1845247",
+            "https://bugzilla.redhat.com/show_bug.cgi?id=1845256",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-11080",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-7598",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8172",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-8174",
+            "https://errata.almalinux.org/8/ALSA-2020-2852.html",
+            "https://errata.rockylinux.org/RLSA-2020:2852",
+            "https://github.com/minimistjs/minimist/commit/10bd4cdf49d9686d48214be9d579a9cdfda37c68",
+            "https://github.com/minimistjs/minimist/commit/38a4d1caead72ef99e824bb420a2528eec03d9ab",
+            "https://github.com/minimistjs/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95",
+            "https://github.com/minimistjs/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94",
+            "https://github.com/substack/minimist",
+            "https://linux.oracle.com/cve/CVE-2020-7598.html",
+            "https://linux.oracle.com/errata/ELSA-2020-2852.html",
+            "https://nvd.nist.gov/vuln/detail/CVE-2020-7598",
+            "https://snyk.io/vuln/SNYK-JS-MINIMIST-559764",
+            "https://www.cve.org/CVERecord?id=CVE-2020-7598",
+            "https://www.npmjs.com/advisories/1179"
+          ],
+          "PublishedDate": "2020-03-11T23:15:11.917Z",
+          "LastModifiedDate": "2024-11-21T05:37:26.9Z"
+        }
+      ]
+    },
+    {
+      "Target": "frontend/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm"
+    },
+    {
+      "Target": "frontended/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "CVE-2026-41305",
+          "PkgID": "postcss@8.4.31",
+          "PkgName": "postcss",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/postcss@8.4.31",
+            "UID": "7f20496238a64806"
+          },
+          "InstalledVersion": "8.4.31",
+          "FixedVersion": "8.5.10",
+          "Status": "fixed",
+          "Layer": {},
+          "SeveritySource": "ghsa",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2026-41305",
+          "DataSource": {
+            "ID": "ghsa",
+            "Name": "GitHub Security Advisory npm",
+            "URL": "https://github.com/advisories?query=type%3Areviewed+ecosystem%3Anpm"
+          },
+          "Title": "postcss: PostCSS: Cross-Site Scripting (XSS) via improper escaping of style closing tags",
+          "Description": "PostCSS takes a CSS file and provides an API to analyze and modify its rules by transforming the rules into an Abstract Syntax Tree. Versions prior to 8.5.10 do not escape `\u003c/style\u003e` sequences when stringifying CSS ASTs. When user-submitted CSS is parsed and re-stringified for embedding in HTML `\u003cstyle\u003e` tags, `\u003c/style\u003e` in CSS values breaks out of the style context, enabling XSS. Version 8.5.10 fixes the issue.",
+          "Severity": "MEDIUM",
+          "CweIDs": [
+            "CWE-79"
+          ],
+          "VendorSeverity": {
+            "ghsa": 2,
+            "redhat": 2
+          },
+          "CVSS": {
+            "ghsa": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "V3Score": 6.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2026-41305",
+            "https://github.com/postcss/postcss",
+            "https://github.com/postcss/postcss/releases/tag/8.5.10",
+            "https://github.com/postcss/postcss/security/advisories/GHSA-qx2v-qp2m-jg93",
+            "https://nvd.nist.gov/vuln/detail/CVE-2026-41305",
+            "https://www.cve.org/CVERecord?id=CVE-2026-41305"
+          ],
+          "PublishedDate": "2026-04-24T03:16:11.547Z",
+          "LastModifiedDate": "2026-04-24T17:16:21.5Z"
+        }
+      ]
+    }
+  ]
+}

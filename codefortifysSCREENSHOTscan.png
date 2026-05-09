@@ -55,3 +55,30 @@ Severity: CRITICAL
 CVE: CVE-2021-44906
 
 Title: minimist: prototype pollution
+
+DevSecOps vulnerability scanner for uploaded projects.
+
+testapp.zipUpload & Scan
+Total Findings
+2
+
+High / Critical
+1
+
+Critical Findings
+Package: minimist
+
+Severity: CRITICAL
+
+CVE: CVE-2021-44906
+
+Title: minimist: prototype pollution
+
+AI Explanation:
+Sure! Here’s a simple explanation of the vulnerability in the **minimist** package:
+
+---
+
+### 1. Plain English explanation
+**Prototype pollution** means an attacker can trick the program into changing the default behavior of objects in JavaScript. In the minimist package, which is used to handle command-line arguments, an attacker can send specially crafted input that changes internal object properties. This can lead to unexpected behavior or security problems in your application.
+

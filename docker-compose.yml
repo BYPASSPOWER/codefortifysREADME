@@ -4,6 +4,8 @@ services:
     container_name: codefortify-backend
     ports:
       - "5000:5000"
+    env_file:
+      - ./backend/.env
 
   frontend:
     build: ./frontended

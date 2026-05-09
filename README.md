@@ -120,3 +120,14 @@ Prometheus scrapes backend metrics from the `/metrics` endpoint, while Grafana p
 ![SaaS UI](./screenshots/codefortify-saas-ui.png)
 
 CodeFortify frontend was redesigned into a modern SaaS-style dashboard featuring vulnerability summary cards, branded UI, and polished findings presentation.
+
+## Azure Deployment
+
+
+## AI Security Analysis
+
+CodeFortify uses OpenAI to generate:
+- Plain-English vulnerability explanations
+- Risk analysis
+- Remediation guidance
+- Security prioritization
