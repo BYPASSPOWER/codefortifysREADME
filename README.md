@@ -131,3 +131,7 @@ CodeFortify uses OpenAI to generate:
 - Risk analysis
 - Remediation guidance
 - Security prioritization
+
+## Dashboard Preview
+
+![CodeFortify Dashboard](screenshots/codefortify-dashboard.png)
